@@ -20,3 +20,31 @@ int main(){
     cout<<"The Majority Element is "<<ans<<endl;
 
 }
+
+
+// Method 2
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+int main(){
+    vector <int> arr={1,1,1,2,5,2,3,3,3,3,3,3,3,3,3,4,4};
+    sort(arr.begin(),arr.end());
+    int sz=arr.size();
+    int count=1,ans=0;
+    for(int i=1;i<sz;i++){
+        if (arr[i]==arr[i-1]){
+            count++;
+        }
+        else{
+            count=1;
+        }
+        if (count>sz/2){
+            ans=arr[i];
+            break;
+        }
+
+
+    }
+    cout<<ans;
+}
