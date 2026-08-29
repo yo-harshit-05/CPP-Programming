@@ -4,17 +4,15 @@
 using namespace std;
 int binsearch(vector <int> nums,int start,int end,int target){
     int middle;
-    while(start<=end){
-        middle=(start+end)/2;
-        if(target==nums[middle]){
-            return middle;
-        }
-        else if(target<nums[middle]){
-            return binsearch(nums,start,middle-1,target);
-        }
-        else if(target>nums[middle]){
-            return binsearch(nums,middle+1,end,target);
-        }
+    middle=(start+end)/2;
+    if(target==nums[middle]){
+        return middle;
+    }
+    else if(target<nums[middle]){
+        return binsearch(nums,start,middle-1,target);
+    }
+    else if(target>nums[middle]){
+        return binsearch(nums,middle+1,end,target);
     }
     return -1;
 
