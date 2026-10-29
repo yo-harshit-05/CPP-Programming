@@ -1,0 +1,12 @@
+{
+    "C_Cpp.default.compilerPath": "c:\\msys64\\ucrt64\\bin\\g++.exe",
+    "audioCues.enabled": "off",
+    "accessibility.signals.lineHasError": "off",
+    "accessibility.signals.lineHasWarning": "off",
+    "accessibility.signals.positionHasError": "off",
+    "accessibility.signals.positionHasWarning": "off",
+    "accessibility.signals.terminalBell": {
+        "sound": "off"
+    },
+    "terminal.integrated.enableVisualBell": false
+}
