@@ -20,35 +20,19 @@ Node* arr_to_ll(vector<int> nums) {
 
     for (int i = 1; i < nums.size(); i++) {
         Node* temp = new Node(nums[i]);
-
         prev->next = temp;
         temp->prev = prev;
-
         prev = temp;
     }
-
     return head;
 }
 
 int main() {
     vector<int> nums = {2, 6, 4, 1, 7, 9, 2, 5};
-
     Node* head = arr_to_ll(nums);
-
-    Node* tail = head;
-
-    cout << "Forward: ";
-    while (tail->next) {
-        cout << tail->data << " ";
-        tail = tail->next;
+    while(head){
+        cout<<head->data<<" ";
+        head=head->next;
     }
-    cout << tail->data << endl; // print last node
-
-    cout << "Backward: ";
-    while (tail) {
-        cout << tail->data << " ";
-        tail = tail->prev;
-    }
-
     return 0;
 }
